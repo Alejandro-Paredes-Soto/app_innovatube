@@ -18,12 +18,12 @@ const Video = ({title, videoId, like, onClickRemoveFavoritos}) => {
                 title
             }, localStorage.getItem("token"))
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                 api.success({
                     message: "Agregado correctamente" ,
                     description: `El video ${title} se ha agregado a favoritos`,
                 })             
-            } else if (response.status == 201){
+            } else if (response.status === 201){
                   api.info({
                     message: "Advertencia",
                     description: `El video ${title} ya se encuentra en favoritos`,

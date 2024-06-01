@@ -12,9 +12,9 @@ const List = ({dataListVideos, like}) => {
     const getListFavorites = async () => {
        try {
 
-        const response = await methodGet(`http://127.0.0.1:3001/api/v1/videos/listFavorites?idUser=${localStorage.getItem('idUser')}`, localStorage.getItem("token"))
+        const response = await methodGet(`api/v1/videos/listFavorites?idUser=${localStorage.getItem('idUser')}`, localStorage.getItem("token"))
          
-        if (response.status == 200) {
+        if (response.status === 200) {
             console.log("nueva lista de favoritos")
            setDataListVideosFavorites(response.json.json.rows)
         } else {
@@ -35,7 +35,7 @@ const List = ({dataListVideos, like}) => {
                 idVideo: videoId
             }, localStorage.getItem("token"))
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                 api.success({
                     message: "Desmarcado correctamente" ,
                     description: `El video ${title} se ha desmarcado a favoritos`,

@@ -18,9 +18,9 @@ const Dashboard = () => {
         
         try {
 
-            const response = await methodGet("http://127.0.0.1:3001/api/v1/videos", localStorage.getItem("token"))
+            const response = await methodGet("api/v1/videos", localStorage.getItem("token"))
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                setDataListVideos(response.json.body.items)
             } else {
                 setDataListVideos([])
@@ -48,7 +48,7 @@ const Dashboard = () => {
             if (result.isConfirmed) {
                 const response = await methodPost("api/v1/users/logout", null, localStorage.getItem("token"));
                     
-                    if (response.status == 200) {
+                    if (response.status === 200) {
                       localStorage.clear()
 
                       setTimeout(() => {
@@ -77,7 +77,7 @@ const Dashboard = () => {
                 token: localStorage.getItem("token")
             }, localStorage.getItem("token"))
 
-            if (response.status == 200) {
+            if (response.status === 200) {
                setDataListVideos(response.json.body.items)
             } else {
                 setDataListVideos([])
@@ -94,7 +94,7 @@ const Dashboard = () => {
     }, [])
 
     useEffect(() => {
-        if (localStorage.getItem("token") == null) {
+        if (localStorage.getItem("token") === null) {
             navigate('/')
         }
      }, [])

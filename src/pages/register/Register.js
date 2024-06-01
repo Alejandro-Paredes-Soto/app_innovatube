@@ -58,7 +58,7 @@ const Register = () => {
           content: "Entrar"
         })
 
-        if (response.status == 200) {
+        if (response.status === 200) {
           Snackbar.fire({
             title: "Correcto",
             text: "Usuario creado de menera exitosa, ahora inicia sesion con tu cuenta",
@@ -71,7 +71,7 @@ const Register = () => {
               navigate("/")
             }
            })
-        } else if (response.status == 201) {
+        } else if (response.status === 201) {
             Snackbar.fire({
               title: "Advertencia",
               text: "Ya existe un usuario con el nombre " + dataUser.nameUser,

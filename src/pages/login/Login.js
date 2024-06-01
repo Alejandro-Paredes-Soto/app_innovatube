@@ -48,7 +48,7 @@ const Login = () => {
           content: "Entrar"
         })
 
-        if (response.status == 200) {
+        if (response.status === 200) {
          localStorage.setItem("token", response.json.token)
          localStorage.setItem("nameUser", response.json.nameUser)
          localStorage.setItem("idUser", response.json.idUser)
@@ -93,7 +93,7 @@ const Login = () => {
           content: "Aceptar"
         })
            
-        if (response.status == 200) {
+        if (response.status === 200) {
             
           window.open(response.json.message, "_blank")
           
