@@ -46,7 +46,7 @@ const Dashboard = () => {
             cancelButtonColor: "red"
           }).then(async (result) => {
             if (result.isConfirmed) {
-                const response = await methodPost("http://127.0.0.1:3001/api/v1/users/logout", null, localStorage.getItem("token"));
+                const response = await methodPost("api/v1/users/logout", null, localStorage.getItem("token"));
                     
                     if (response.status == 200) {
                       localStorage.clear()
@@ -72,7 +72,7 @@ const Dashboard = () => {
     const onClickSearchVideo = async () => {
         try {
 
-            const response = await methodPost('http://127.0.0.1:3001/api/v1/videos/search', {
+            const response = await methodPost('api/v1/videos/search', {
                 searchClientVideo:  searchVideo.trim(),
                 token: localStorage.getItem("token")
             }, localStorage.getItem("token"))

@@ -12,7 +12,7 @@ const Video = ({title, videoId, like, onClickRemoveFavoritos}) => {
     const onClickFavoritos = async () => {
         
             try {
-            const response = await methodPost(`http://127.0.0.1:3001/api/v1/videos/favorites`, {
+            const response = await methodPost(`api/v1/videos/favorites`, {
                 idUser: localStorage.getItem("idUser"),
                 idVideo: videoId, 
                 title

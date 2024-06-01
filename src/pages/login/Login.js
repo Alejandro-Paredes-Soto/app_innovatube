@@ -38,7 +38,7 @@ const Login = () => {
           content: "Entrando..."
         })
            
-            const response = await methodPost("http://127.0.0.1:3001/api/v1/users/login", {
+            const response = await methodPost("api/v1/users/login", {
             nameUser: userName.trim(),
             password: password.trim()
         })
@@ -81,7 +81,7 @@ const Login = () => {
         })
 
         const response = await methodPost(
-          "http://127.0.0.1:3001/api/v1/password/forgot-password",
+          "api/v1/password/forgot-password",
           {
             email: email
           },

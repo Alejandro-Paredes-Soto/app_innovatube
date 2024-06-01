@@ -1,8 +1,11 @@
 import axios from 'axios';
 
+
+const URL_BASE = "https://service-innovatube.onrender.com/"
+
 export const methodGet = async (url, token) => {
     try {
-        const response = await axios.get(url, {
+        const response = await axios.get(`${URL_BASE}${url}`, {
             headers: {
                 Authorization: token
             }
@@ -29,7 +32,7 @@ export const methodGet = async (url, token) => {
 
 export const methodPost = async (url, data, token) => {
     try {
-        const response = await axios.post(url, data, {
+        const response = await axios.post(`${URL_BASE}${url}`, data, {
             headers: {
                 Authorization: token
             }

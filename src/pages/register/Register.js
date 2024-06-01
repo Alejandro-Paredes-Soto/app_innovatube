@@ -51,7 +51,7 @@ const Register = () => {
           content: "Registrando..."
         })
 
-        const response = await methodPost("http://127.0.0.1:3001/api/v1/users/registerUser", dataUser, localStorage.getItem("token"))
+        const response = await methodPost("api/v1/users/registerUser", dataUser, localStorage.getItem("token"))
         
         setLoading({
           loading: "",

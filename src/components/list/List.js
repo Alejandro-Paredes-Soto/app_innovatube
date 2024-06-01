@@ -30,7 +30,7 @@ const List = ({dataListVideos, like}) => {
     const onClickRemoveFavoritos = async (videoId, title) => {
 
         try {
-            const response = await methodPost(`http://127.0.0.1:3001/api/v1/videos/removeFavoriteVideo`, {
+            const response = await methodPost(`api/v1/videos/removeFavoriteVideo`, {
                 idUser: localStorage.getItem("idUser"),
                 idVideo: videoId
             }, localStorage.getItem("token"))

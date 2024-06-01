@@ -45,7 +45,7 @@ const Favorites = () => {
             cancelButtonColor: "red"
           }).then(async (result) => {
             if (result.isConfirmed) {
-                const response = await methodPost("http://127.0.0.1:3001/api/v1/users/logout", null, localStorage.getItem("token"));
+                const response = await methodPost("api/v1/users/logout", null, localStorage.getItem("token"));
                     
                     if (response.status == 200) {
                       localStorage.removeItem("token");
