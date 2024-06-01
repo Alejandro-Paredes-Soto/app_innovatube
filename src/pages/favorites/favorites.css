@@ -1,0 +1,75 @@
+section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    border: solid;
+}
+
+.content .container-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container-search .options {  
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.container-search .options li {
+    display: flex;
+}
+
+.container-search .options li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+.container-search .options i {
+    font-size: 15px;
+    margin-right: 5px;
+}
+.content .container-search .btn-search {
+    background: #060C43;
+    color: white;
+    font-weight: 200;
+}
+
+.container-search .data-user span {
+    text-align: center;
+    word-break: break-word;
+}
+
+.container-search .data-user i {
+    margin-left: 5px;
+    color: black;
+    font-size: 30px;
+}
+.content .hamburguer {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.section-videos {
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+.section-videos .list-videos {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+}
