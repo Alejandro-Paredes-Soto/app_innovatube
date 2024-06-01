@@ -116,6 +116,7 @@ const Register = () => {
                     <div className="col">
                     <label class="form-label text-white">Nombre</label>
                       <input type="text" className="form-control" placeholder="Nombre"
+                       autoComplete="off"
                        onChange={(e) => {
                         setDataUser((prevDataUser) => {
                           prevDataUser.name = e.target.value;
@@ -127,6 +128,7 @@ const Register = () => {
                     <div className="col">
                     <label class="form-label text-white">Apellido</label>
                       <input type="text" className="form-control" placeholder="Apellido"
+                      autoComplete="off"
                        onChange={(e) => {
                         setDataUser((prevDataUser) => {
                           prevDataUser.lastName = e.target.value;
@@ -145,6 +147,7 @@ const Register = () => {
                     type="text" 
                     className="form-control" 
                     placeholder="Nombre de usuario"
+                    autoComplete="off"
                     onChange={(e) => {
                       setDataUser((prevDataUser) => {
                         prevDataUser.nameUser = e.target.value;
@@ -162,6 +165,7 @@ const Register = () => {
                       id="exampleInputEmail1" 
                       aria-describedby="emailHelp"
                       placeholder='Correo electronico'
+                      autoComplete="off"
                   onChange={(e) => {
                     setDataUser((prevDataUser) => {
                       prevDataUser.email = e.target.value;
@@ -180,6 +184,7 @@ const Register = () => {
                     type="password" 
                     className="form-control" 
                     placeholder="Contraseña"
+                    autoComplete="off"
                     onChange={(e) => {
                       setDataUser((prevDataUser) => {
                         prevDataUser.password = e.target.value;
@@ -195,6 +200,7 @@ const Register = () => {
                     type="password" 
                     className="form-control" 
                     placeholder="Confirma tu contraseña"
+                    autoComplete="off"
                     onChange={(e) => {
                       setDataUser((prevDataUser) => {
                         prevDataUser.password2 = e.target.value;

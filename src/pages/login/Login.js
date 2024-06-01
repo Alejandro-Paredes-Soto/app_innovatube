@@ -143,6 +143,7 @@ const Login = () => {
                   type="text" 
                   className="form-control" 
                   placeholder="Correo electronico o Usuario"
+                  autoComplete="off"
                   onChange={(e) => {
                     setDataLogin(prevDataLogin => {
                       prevDataLogin.userName = e.target.value;
@@ -159,6 +160,7 @@ const Login = () => {
                   type="password" 
                   className="form-control" 
                   placeholder="Contraseña"
+                  autoComplete="off"
                   onChange={(e) => {
                     setDataLogin(prevDataLogin => {
                       prevDataLogin.password = e.target.value;
