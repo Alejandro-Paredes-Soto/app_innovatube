@@ -94,8 +94,14 @@ const Login = () => {
         })
            
         if (response.status === 200) {
+
+          Snackbar.fire({
+            title: "Correcto",
+            text: "Se ha enviado un correo a tu cuenta para recuperar tu contraseña.",
+            icon: "success"
+          })
             
-          window.open(response.json.message, "_blank")
+        //  window.open(response.json.message, "_blank")
           
         } else {
           Snackbar.fire({
