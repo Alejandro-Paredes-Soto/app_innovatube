@@ -27,7 +27,7 @@ const Register = () => {
 
     const onClickRegisterUser = async () => {
       const regex = /^(([^<>()\[\]\\.,;:\s@"]+)(\.[^<>()\[\]\\.,;:\s@"]+)*)@(([^<>()\[\]\\.,;:\s@"]+)(\.[^<>()\[\]\\.,;:\s@"]+)*)$/;
-       console.log(regex.test(dataUser.email))
+       
       if (!regex.test(dataUser.email)) {
         Snackbar.fire({
           title: "Error",
