@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from 'react';
 import './favorites.css'
-import Video from '../../components/video/Video';
 import { methodGet, methodPost } from "./../../services/index"
 import { useNavigate } from 'react-router-dom';
 import Snackbar from 'sweetalert2'
